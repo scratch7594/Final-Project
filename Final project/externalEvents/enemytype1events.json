@@ -1,6 +1,54 @@
 {
-  "associatedLayout": "",
+  "associatedLayout": "Level1",
   "lastChangeTimeStamp": 0,
   "name": "EnemyType1Events",
-  "events": []
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "PosX"
+          },
+          "parameters": [
+            "GreenEnemy",
+            "<=",
+            "CameraX()+450"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "FireBullet::FireBullet::Fire"
+          },
+          "parameters": [
+            "GreenEnemy",
+            "FireBullet",
+            "GreenEnemy.X()",
+            "GreenEnemy.Y()",
+            "",
+            "180",
+            "300",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    }
+  ]
 }

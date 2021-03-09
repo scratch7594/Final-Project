@@ -2,5 +2,2791 @@
   "associatedLayout": "Level1",
   "lastChangeTimeStamp": 0,
   "name": "PlayerEvents",
-  "events": []
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "movement",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Right"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Player",
+            "0",
+            "400",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Player",
+            "180",
+            "400",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Up"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Player",
+            "270",
+            "400",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Down"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Player",
+            "90",
+            "400",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "fire modes",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Space"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SoundPlaying"
+              },
+              "parameters": [
+                "",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "270343__littlerobotsoundfactory__shoot-012.wav",
+                "1",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+0",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()+0",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+20",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()+20",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()-5",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()-5",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+25",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+115",
+                "Player.Y()+25",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+5",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+45",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()-0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+50",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()-20",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+5",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+45",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "Player.X()+300",
+                "Player.Y()+70",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Bullet",
+                "0",
+                "600",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+50",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+80",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+110",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+140",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+170",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+200",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+230",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+10",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+15",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+20",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+25",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "FireBullet::FireBullet::Fire"
+              },
+              "parameters": [
+                "Player",
+                "FireBullet",
+                "Player.X()+260",
+                "Player.Y()+30",
+                "Laser",
+                "0",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Power ups",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "RedPowerUp1",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "RedPowerUp1",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SoundPlaying"
+              },
+              "parameters": [
+                "Player",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "Player",
+                "270340__littlerobotsoundfactory__pickup-01.wav",
+                "2",
+                "1.3",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                ">",
+                "1.5"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "1.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "YellowPowerUp2",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "YellowPowerUp2",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SoundPlaying"
+              },
+              "parameters": [
+                "Player",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "Player",
+                "270340__littlerobotsoundfactory__pickup-01.wav",
+                "2",
+                "1.3",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                ">",
+                "3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "<",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "2.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "GreenPowerUp3",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "GreenPowerUp3",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SoundPlaying"
+              },
+              "parameters": [
+                "Player",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "Player",
+                "270340__littlerobotsoundfactory__pickup-01.wav",
+                "2",
+                "1.3",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "<",
+                "3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "FireMode",
+                "=",
+                "3.1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Death and damage",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Player",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "Player",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Explosion",
+            "Player.X()",
+            "Player.Y()",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeScale"
+          },
+          "parameters": [
+            "Explosion",
+            "=",
+            ".2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "Enemies",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::Hit"
+          },
+          "parameters": [
+            "Player",
+            "Health",
+            "100",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsJustDamaged"
+          },
+          "parameters": [
+            "Player",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "Health",
+            "=",
+            "\"Health: \" + LargeNumberToString(Player.Health::Health())"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Flash::Flash::Flash"
+          },
+          "parameters": [
+            "Player",
+            "Flash",
+            ".5",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    }
+  ]
 }

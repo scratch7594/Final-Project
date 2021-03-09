@@ -16,10 +16,10 @@
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "Project",
+    "name": "FinalProjectShooter",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 900,
+    "windowHeight": 500,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -96,7 +96,471 @@
     "currentPlatform": "GDevelop JS platform"
   },
   "resources": {
-    "resources": [],
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "plane_1_red2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plane_1_red2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "plane_2_blue2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plane_2_blue2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "plane_2_green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plane_2_green.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "plane_2_yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plane_2_yellow.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "plane_3_blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plane_3_blue.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 12.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 22.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 32.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 32.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 42.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 42.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 52.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 52.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 62.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 62.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 13.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 23.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 33.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 33.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 43.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 43.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 53.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 53.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 63.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 63.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 14.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 24.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 24.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 34.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 34.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 44.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 44.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 54.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 54.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "frame 64.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "frame 64.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "FB001.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FB001.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "FB002.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FB002.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "FB003.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FB003.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "FB004.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FB004.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "FB005.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FB005.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NicePng_laser-beam-png_150268.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NicePng_laser-beam-png_150268.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "laser_player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "laser_player.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "270335__littlerobotsoundfactory__shoot-03.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "270335__littlerobotsoundfactory__shoot-03.wav",
+        "userAdded": true
+      },
+      {
+        "file": "270335__littlerobotsoundfactory__shoot-032.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "270335__littlerobotsoundfactory__shoot-032.wav",
+        "userAdded": true
+      },
+      {
+        "file": "270343__littlerobotsoundfactory__shoot-01.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "270343__littlerobotsoundfactory__shoot-01.wav",
+        "userAdded": true
+      },
+      {
+        "file": "270343__littlerobotsoundfactory__shoot-012.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "270343__littlerobotsoundfactory__shoot-012.wav",
+        "userAdded": true
+      },
+      {
+        "file": "270340__littlerobotsoundfactory__pickup-01.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "270340__littlerobotsoundfactory__pickup-01.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Kenney Future Narrow.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Kenney Future Narrow.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "soundtrack.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "soundtrack.ogg",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_02.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_03.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_04.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_05.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_06.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_07.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_08.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion_09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion_09.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Enemybullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Enemybullet.png",
+        "smoothed": true,
+        "userAdded": true
+      }
+    ],
     "resourceFolders": []
   },
   "objects": [],
@@ -142,7 +606,24 @@
       "referenceTo": "/externalEvents/bossevents"
     }
   ],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flash"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/stayonscreen"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/firebullet"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/health"
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }
